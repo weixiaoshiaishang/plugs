@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>新标签页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			font-family: 'Microsoft Yahei';
+			margin: 0;
+			padding: 0;
+		}
+
+		.center {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 40px;
+			color: #CCC;
+		}
+
+		.content {
+			position: absolute;
+			left: 20px;
+			top: 10px;
+		}
+
+		.list {
+			margin: 10px;
+		}
+
+		.list li.red {
+			color: red;
+		}
+
+		.list tr {
+			width: 1100px;
+			border: 1px solid blue;
+			margin: 10px;
+		}
+
+		.method {
+			width: 100px;
+		}
+
+		.url div {
+			width: 800px;
+			word-wrap: break-word;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+
+		.status {
+			width: 100px;
+			text-align: center;
+		}
+
+		.statusText {
+			position: relative;
+			width: 100px;
+			text-align: center;
+		}
+
+		.word {
+			cursor: pointer;
+		}
+
+		.desc {
+			display: none;
+			position: absolute;
+			z-index: 99;
+			right: 70px;
+			top: 20px;
+			padding: 5px 10px;
+			min-width: 180px;
+			text-align: center;
+			border: 1px solid rgb(18, 121, 218);
+			background-color: rgb(18, 121, 218);
+			color: #fff;
+			border-radius: 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<p>这是一个自定义Chrome开发者工具页面</p>
+	</div>
+	<div class="content">
+		<div><a href="javascript:;" id="check_jquery">检测当前页面jQuery</a></div>
+		<div><a href="javascript:;" id="open_resource">查看当前页面HTML代码的第20行</a></div>
+		<div><a href="javascript:;" id="test_inspect">审查当前页面第一张图片</a></div>
+		<div><a href="javascript:;" id="get_all_resources">获取当前页面所有Resources</a></div>
+	</div>
+	<div class="show">
+		<h1>请求信息</h1>
+		<table class="list">
+			<tr>
+				<th>方法</th>
+				<th>地址</th>
+				<th>状态</th>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/mypanel.js"></script>
+</body>
+
+</html>
